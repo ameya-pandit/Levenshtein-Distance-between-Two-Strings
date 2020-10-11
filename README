@@ -1,0 +1,35 @@
+Can run the code in the following two ways: 
+
+1) % make edit_distance
+./edit_distance string1 to string2 
+
+User input string1 and string2. You driver will print out the value of edit
+distance and the edit table as follow:
+
+% ./edit_distance algorithm to analysis
+Edit Distance: 24
+Operation       z                               Cost    Total
+----------------------------------------------------------------
+initial string  *algorithm                      0       0
+insert a        a*algorithm                     3       3
+insert n        an*algorithm                    3       6
+right           ana*lgorithm                    0       6
+right           anal*gorithm                    0       6
+delete          anal*orithm                     2       8
+replace by y    analy*rithm                     4       12
+replace by s    analys*ithm                     4       16
+right           analysi*thm                     0       16
+delete          analysi*hm                      2       18
+delete          analysi*m                       2       20
+replace by s    analysis*                       4       24
+
+2) % make edit_distance
+./edit_distance filename
+
+User provides an input file "filename", which is organized as described in the
+problem. You driver reads the file and prints out the edit distance as follow:
+
+% ./edit_distance input1
+Edit distance: 100
+
+There is only one line in the output.
